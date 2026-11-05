@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ProductService } from "@/services/products-service";
 
@@ -22,16 +21,13 @@ export default function Home({ featuredProducts }: any) {
       {/* HERO SECTION */}
       <section className="grid min-h-[600px] grid-cols-1 md:grid-cols-2">
 
-        <div className="relative min-h-[500px] md:min-h-[600px]">
-          <Image
-            src="/girl.jpg"
-            alt="ShopKart Fashion Collection"
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover object-center"
-          />
-        </div>
+         <div className="relative min-h-[500px] md:min-h-[600px]">
+  <img
+    src="/images/girl.jpg"
+    alt="ShopKart Fashion Collection"
+    className="absolute inset-0 h-full w-full object-cover object-center"
+  />
+</div>
 
         <div className="flex min-h-[450px] items-center bg-[#D8C8B5] px-8 py-16 md:px-12 lg:px-16">
 
