@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -22,11 +21,11 @@ function Navigation() {
 
   return (
     <div>
-      <nav className="h-14 bg-[#D8C8B5] text-black">
+      <nav className="min-h-14 bg-[#D8C8B5] text-black">
         <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex min-h-16 flex-wrap items-center justify-between gap-y-3 py-2">
 
-         
+            {/* Logo */}
             <Link className="text-2xl font-bold" href="/">
               ShopKart
             </Link>
@@ -36,7 +35,7 @@ function Navigation() {
               <form
                 action="/products"
                 method="GET"
-                className="flex items-center gap-2"
+                className="order-3 flex w-full items-center gap-2 lg:order-none lg:w-auto"
               >
                 {/* Preserve selected category */}
                 {category && (
@@ -65,8 +64,8 @@ function Navigation() {
               </form>
             )}
 
-           
-            <div className="flex space-x-6">
+            {/* Navigation Links */}
+            <div className="order-2 flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-3 lg:order-none lg:w-auto lg:justify-end">
 
               <Link
                 className="transition duration-200 hover:text-[#8C6A50]"
